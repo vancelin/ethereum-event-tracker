@@ -1,0 +1,299 @@
+{
+  "paramCheck": {
+    "type": {
+      "errCode": 101,
+      "status": "failure",
+      "ITmessage": "參數型別錯誤",
+      "msg": "請確認填寫的欄位數字或文字均正確",
+      "errorDetail": null
+    },
+    "required": {
+      "errCode": 102,
+      "status": "failure",
+      "ITmessage": "參數不存在",
+      "msg": "請確認填寫所需要的欄位",
+      "errorDetail": null
+    },
+    "minLength": {
+      "errCode": 103,
+      "status": "failure",
+      "ITmessage": "參數長度錯誤",
+      "msg": "請確認參數長度",
+      "errorDetail": null
+    },
+    "not": {
+      "errCode": 104,
+      "status": "failure",
+      "ITmessage": "參數不予許填入特定值",
+      "msg": "請確認參數值",
+      "errorDetail": null
+    },
+    "pattern": {
+      "errCode": 105,
+      "status": "failure",
+      "ITmessage": "pattern格式不正確",
+      "msg": "pattern格式不正確，請重新填寫",
+      "errorDetail": null
+    },
+    "format": {
+      "errCode": 106,
+      "status": "failure",
+      "ITmessage": "format格式不正確",
+      "msg": "format格式不正確，請重新填寫",
+      "errorDetail": null
+    }
+  },
+  "module": {
+    "md5": {
+      "errCode": 201,
+      "status": "failure",
+      "ITmessage": "hash錯誤",
+      "msg": "請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "ajv": {
+      "errCode": 202,
+      "status": "failure",
+      "ITmessage": "ajv捕捉到try catch 的錯誤",
+      "msg": "發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "multer": {
+      "errCode": 203,
+      "status": "failure",
+      "ITmessage": "multer捕捉到try catch 的錯誤",
+      "msg": "發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    }
+  },
+  "service": {
+    "sendEmail": {
+      "errCode": 300,
+      "status": "failure",
+      "ITmessage": "sendEmail catch not expected error",
+      "msg": "發生未預期錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "sendSMS": {
+      "errCode": 301,
+      "status": "failure",
+      "ITmessage": "sendSMS catch not expected error",
+      "msg": "發生未預期錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "setToken": {
+      "errCode": 302,
+      "status": "failure",
+      "ITmessage": "setToken catch not expected error",
+      "msg": "發生未預期錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "setEmailToken": {
+      "errCode": 303,
+      "status": "failure",
+      "ITmessage": "setEmailToken catch not expected error",
+      "msg": "發生未預期錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "verifyToken": {
+      "errCode": 304,
+      "status": "failure",
+      "ITmessage": "verifyToken catch not expected error",
+      "msg": "發生未預期錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "decodeToken": {
+      "errCode": 305,
+      "status": "failure",
+      "ITmessage": "decodeToken catch not expected error",
+      "msg": "發生未預期錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "blowfishEncrypt": {
+      "errCode": 306,
+      "status": "failure",
+      "ITmessage": "blowfishEncrypt catch not expected error",
+      "msg": "發生未預期錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "blowfishDecrypt": {
+      "errCode": 307,
+      "status": "failure",
+      "ITmessage": "blowfishDecrypt catch not expected error",
+      "msg": "發生未預期錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "upload": {
+      "errCode": 308,
+      "status": "failure",
+      "ITmessage": "upload catch not expected error",
+      "msg": "發生未預期錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "uploadFailChangeTB": {
+      "errCode": 309,
+      "status": "failure",
+      "ITmessage": "upload then write TB catch not expected error",
+      "msg": "發生未預期錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    }
+  },
+  "model": {
+    "users": {
+      "errCode": 401,
+      "status": "failure",
+      "ITmessage": "users model try catch error",
+      "msg": "Model發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "categorys": {
+      "errCode": 402,
+      "status": "failure",
+      "ITmessage": "categorys model try catch error",
+      "msg": "Model發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "products": {
+      "errCode": 403,
+      "status": "failure",
+      "ITmessage": "products model try catch error",
+      "msg": "Model發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "transactions": {
+      "errCode": 404,
+      "status": "failure",
+      "ITmessage": "transactions model try catch error",
+      "msg": "Model發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "managers": {
+      "errCode": 405,
+      "status": "failure",
+      "ITmessage": "managers model try catch error",
+      "msg": "Model發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "bank_info": {
+      "errCode": 406,
+      "status": "failure",
+      "ITmessage": "bank_info model try catch error",
+      "msg": "Model發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "user_info": {
+      "errCode": 407,
+      "status": "failure",
+      "ITmessage": "user_info model try catch error",
+      "msg": "Model發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    }
+  },
+  "router": {
+    "users": {
+      "errCode": 501,
+      "status": "failure",
+      "ITmessage": "users router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "categorys": {
+      "errCode": 502,
+      "status": "failure",
+      "ITmessage": "categorys router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "products": {
+      "errCode": 503,
+      "status": "failure",
+      "ITmessage": "products router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "transactions": {
+      "errCode": 504,
+      "status": "failure",
+      "ITmessage": "transactions router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "managers": {
+      "errCode": 505,
+      "status": "failure",
+      "ITmessage": "managers router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "login": {
+      "errCode": 506,
+      "status": "failure",
+      "ITmessage": "login router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "adminUploadImg": {
+      "errCode": 507,
+      "status": "failure",
+      "ITmessage": "photo/upload router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "member": {
+      "errCode": 508,
+      "status": "failure",
+      "ITmessage": "member router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "frontCategory": {
+      "errCode": 509,
+      "status": "failure",
+      "ITmessage": "/api/1.0/category router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "frontUploadImg": {
+      "errCode": 510,
+      "status": "failure",
+      "ITmessage": "upload/Img router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "frontUploadAttendant": {
+      "errCode": 511,
+      "status": "failure",
+      "ITmessage": "upload/attendant router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "bank_info": {
+      "errCode": 512,
+      "status": "failure",
+      "ITmessage": "bank_info router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "frontUploadBankInfo": {
+      "errCode": 513,
+      "status": "failure",
+      "ITmessage": "/upload/bank_info router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "user_info": {
+      "errCode": 513,
+      "status": "failure",
+      "ITmessage": "user_info router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    },
+    "frontUploadUserInfo": {
+      "errCode": 514,
+      "status": "failure",
+      "ITmessage": "/upload/user_info router try catch error",
+      "msg": "Router發生錯誤，請聯絡資訊人員",
+      "errorDetail": null
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# OS cache files
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Build directories
+dist/
+
+# To maintain directory structure
+!.keep
