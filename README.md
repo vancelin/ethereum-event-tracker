@@ -4,16 +4,16 @@
 
 ### 1. setup Mysql & Redis
 
-### 2. import sql script
+### 2. import sql file
 
 ### 3. install packages
 
 ``` npm install ```
 
-### 4. setup the config
+### 4. set up the config
 
 ```
-# revise the configs/deafault.js
+# revise the configs/default.js
 
 # infuraKey: add infura key
 # contractAddress: default setting is monitoring the USDT status, change the contractAddress if you want
@@ -26,10 +26,10 @@ const infuraKey = ''; // infura Key
 
 module.exports = {
 	eth: {
-		//web3Url: 'https://api.mycryptoapi.com/eth',
-		// web3Url: 'https://mew.giveth.io/',
-		// web3Url: 'https://free-white-lingering-feather.quiknode.pro/baa56bcf1860f96cbd83dc5810f6d65fa58e2550/',
-		web3Url: 'wss://mainnet.infura.io/ws/v3/' + infuraKey,
+		// web3EndPoint: 'https://api.mycryptoapi.com/eth',
+		// web3EndPoint: 'https://mew.giveth.io/',
+		// web3EndPoint: 'https://free-white-lingering-feather.quiknode.pro/baa56bcf1860f96cbd83dc5810f6d65fa58e2550/',
+		web3EndPoint: 'wss://mainnet.infura.io/ws/v3/' + infuraKey,
 		contractAddress: "0xdac17f958d2ee523a2206206994597c13d831ec7", // USDT
 		walletAddresses: ['0x876EabF441B2EE5B5b0554Fd502a8E0600950cFa'],
 		contractAbi: ...,

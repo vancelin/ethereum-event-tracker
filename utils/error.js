@@ -1,6 +1,10 @@
 'use strict';
 
 const errConfig = require('../configs/error.json');
+const logConfig = require('../configs/log4js.json');
+const log4js = require('log4js');
+log4js.configure(logConfig);
+const log = log4js.getLogger('app');
 
 function errFormat(err) {
   if (typeof (err) === 'string') {
@@ -32,6 +36,7 @@ exports.reqCheckSend = (errType, err) => {
     return errObj;
   }
   catch (e) {
+    log.error('參數檢查層 發生錯誤', e);
     console.error('參數檢查層 發生錯誤', e);
   }
 }
@@ -52,6 +57,7 @@ exports.moduleSend = (errType, err) => {
     return errObj;
   }
   catch (e) {
+    log.error('模組發生錯誤', e);
     console.error('模組發生錯誤', e);
   }
 }
@@ -72,6 +78,7 @@ exports.serviceSend = (errType, err) => {
     return errObj;
   }
   catch (e) {
+    log.error('商業邏輯層 發生錯誤', e);
     console.error('商業邏輯層 發生錯誤', e);
   }
 }
@@ -92,6 +99,7 @@ exports.routerSend = (errType, err) => {
     return errObj;
   }
   catch (e) {
+    log.error('Router層 發生錯誤', e);
     console.error('Router層 發生錯誤', e);
   }
 }
@@ -113,6 +121,7 @@ exports.modelSend = (errType, err) => {
     return errObj;
   }
   catch (e) {
+    log.error('Model層 發生錯誤', e);
     console.error('Model層 發生錯誤', e);
   }
 }

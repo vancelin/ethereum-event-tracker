@@ -9,9 +9,16 @@ exports.getBlockInfo = () => {
     try {
       const _sql = "SELECT * FROM blocknumber LIMIT 1";
       const selectResult = await query(_sql, []);
+      // console.log('selectResult', selectResult);
       const resultObj = {};
-      resultObj.earliest = selectResult.data[0].earliest;
-      resultObj.latest = selectResult.data[0].latest;
+
+      if (selectResult.data.length === 0) {
+        resultObj.earliest = null;
+        resultObj.latest = null;
+      } else {
+        resultObj.earliest = selectResult.data[0].earliest;
+        resultObj.latest = selectResult.data[0].latest;
+      }
       resolve(resultObj);
     } catch (e) {
       const errObj = errorMessage.modelSend("getBlockInfo", e);
@@ -48,6 +55,24 @@ exports.updateRecordToDB = (opdateObj) => {
       resolve(true);
     } catch (e) {
       const errObj = errorMessage.modelSend("updateRecordToDB", e);
+      reject(errObj);
+    };
+  });
+};
+
+exports.updateBlockNumber = (blockInfo) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const { earliestBlock, latestBlock } = blockInfo;
+      // console.log('earliestBlock', earliestBlock);
+      // console.log('latestBlock', latestBlock);
+      const _sql = "REPLACE INTO blocknumber(id, earliest, latest) VALUES (1, ?, ?);"
+      const result = await query(_sql, [earliestBlock, latestBlock]);
+      // let isDone = false;
+      // (result.data.affectedRows === 1) ? isDone = true : isDone = false;
+      resolve(true);
+    } catch (e) {
+      const errObj = errorMessage.modelSend("updateBlockNumber", e);
       reject(errObj);
     };
   });
