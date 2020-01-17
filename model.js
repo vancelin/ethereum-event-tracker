@@ -46,12 +46,12 @@ exports.updateRecordToDB = (opdateObj) => {
   return new Promise(async (resolve, reject) => {
     try {
       const { transaction_hash, status } = opdateObj;
-      console.log('transaction_hash', transaction_hash);
-      console.log('status', status);
+      // console.log('transaction_hash', transaction_hash);
+      // console.log('status', status);
       const _sql = "UPDATE transfer_history SET status = ? WHERE transaction_hash = ?";
       const result = await query(_sql, [status, transaction_hash]);
-      let isDone = false;
-      (result.data.affectedRows === 1) ? isDone = true : isDone = false;
+      // let isDone = false;
+      // (result.data.affectedRows === 1) ? isDone = true : isDone = false;
       resolve(true);
     } catch (e) {
       const errObj = errorMessage.modelSend("updateRecordToDB", e);
@@ -68,7 +68,7 @@ exports.updateBlockNumber = (blockInfo) => {
       // console.log('latestBlock', latestBlock);
       const _sql = "REPLACE INTO blocknumber(id, earliest, latest) VALUES (1, ?, ?);"
       const result = await query(_sql, [earliestBlock, latestBlock]);
-      // let isDone = false;
+      let isDone = false;
       // (result.data.affectedRows === 1) ? isDone = true : isDone = false;
       resolve(true);
     } catch (e) {

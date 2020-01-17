@@ -8,7 +8,7 @@ const Bull = require('bull');
 const Web3 = require('web3');
 const transactionHashQueue = new Bull('transactionHash', configs.redisQueueConnection);
 
-async function EventTracker() {
+async function eventTracker() {
 
 	try {
 

@@ -19,7 +19,7 @@ async function processQueue() {
 			const transactionReceipt = await web3.eth.getTransactionReceipt(job.data.transaction_hash);
 			// console.log('transactionReceipt', transactionReceipt);
 			if (transactionReceipt.status) {
-				console.log('checked the transaction receipt', transaction_hash);
+				console.log('checked the transaction receipt', job.data.transaction_hash);
 				const updateObj = {
 					transaction_hash: job.data.transaction_hash,
 					status: 1
