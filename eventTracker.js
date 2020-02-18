@@ -72,7 +72,7 @@ async function getPastEvents(fromBlock, toBlock) {
 	const contract = new web3.eth.Contract(configs.eth.contractAbi, configs.eth.contractAddress);
 
 	try {
-		let events = await contract.getPastEvents("Transfer", {
+		let events = await contract.getPastEvents("allEvents", {
       fromBlock: fromBlock,
       toBlock: toBlock,
       filter: {
